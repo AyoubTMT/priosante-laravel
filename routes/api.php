@@ -20,6 +20,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 
-Route::post('/tariffs', [ApiController::class, 'getTariffs']);
-Route::post('/save-policy', [ApiController::class, 'savePolicy']);
+Route::post('/tarificateur', [ApiController::class, 'getTariffs']);
+Route::post('/saveDevis', [ApiController::class, 'saveDevis']);
 Route::get('/test', [ApiController::class, 'test']);
