@@ -1,0 +1,107 @@
+<?php
+return [
+    'sante' => [
+        'formules_par_produit' =>[
+            'SERENISSIA' => ['ES_100','ES_100_B','ES_125','ES_150','ES_175','ES_200','ES_250','ES_300'],
+            'CAPITAL_SENIOR'          => ['BUDGET','ESSENTIEL','SECURITE','EQUILIBRE','CONFORT','BIEN_ETRE'],
+            'CAPITAL_VITALITE_SENIOR' => ['BASIQUE','BUDGET_PLUS','RENFORT','ENERGIE'],
+            'OPTION_BUDGET' => ['OPTION_BUDGET_100_B','OPTION_BUDGET_150_B','OPTION_BUDGET_175_B','OPTION_BUDGET_250_B','OPTION_BUDGET_300_B'],
+            'CAP_SANTE_SENIOR_REMA' => ['CAP_1','CAP_2','CAP_3','CAP_4'],
+            'SERENISSIME_INSUREM' => ['SERENISSIME_FORMULE_150','SERENISSIME_FORMULE_200','SERENISSIME_FORMULE_250','SERENISSIME_FORMULE_300'],
+            'MUTACTIF' => ['MUTACTIF_FORMULE_100', 'MUTACTIF_FORMULE_150', 'MUTACTIF_FORMULE_200', 'MUTACTIF_FORMULE_250', 'MUTACTIF_FORMULE_300'],
+        ],
+        'formule_budget' => [
+            'ENTRE_20_ET_50' => ['ES_100','ES_100_B','ES_125','FORMULE_1','FORMULE_2','MUTACTIF_FORMULE_100', 'MUTACTIF_FORMULE_150','ACCESS','MEDIUM','BUDGET','ESSENTIEL','CAP_1','BASIQUE','OPTION_BUDGET_100_B','SERENISSIME_FORMULE_150'],
+            'ENTRE_50_ET_100' => ['ES_150','ES_175','ES_200','FORMULE_3','MUTACTIF_FORMULE_200','MEDIANE','MEDIANE_PLUS','SECURITE','EQUILIBRE','CAP_2','CAP_3','BUDGET_PLUS','RENFORT','OPTION_BUDGET_150_B','OPTION_BUDGET_175_B','SERENISSIME_FORMULE_200'],
+            'ENTRE_100_ET_250' => ['ES_250','ES_300','FORMULE_4','FORMULE_5','MUTACTIF_FORMULE_250', 'MUTACTIF_FORMULE_300','INTEGRALE','INTEGRALE_PLUS','CONFORT','BIEN_ETRE','ENERGIE','QUIETUDE','CONFIANCE','PREMIUM','CAP_4','OPTION_BUDGET_250_B','OPTION_BUDGET_300_B','SERENISSIME_FORMULE_250','SERENISSIME_FORMULE_300'],
+        ],
+        'age_par_produit' => [
+            'ACTISAN'                           => ['min'=>'18','max'=>'55'],
+            'SERENISSIA'                        => ['min'=>'55','max'=>'85'],
+            'CAPITAL_SENIOR'           => ['min'=>'55','max'=>'95'],
+            'CAPITAL_VITALITE_SENIOR'  => ['min'=>'55','max'=>'100'],
+            'OPTION_BUDGET'            => ['min'=>'18','max'=>'85'],
+            'CAP_SANTE_SENIOR_REMA'    => ['min'=>'60','max'=>'95'],
+            'SERENISSIME_INSUREM'      => ['min'=>'55','max'=>'90'],
+            'FORTICIA_REMA'            => ['min'=>'18','max'=>'79'],
+            'INSURACTIF'               => ['min'=>'18','max'=>'55'],
+            'MUTACTIF'                 => ['min'=>'18','max'=>'55'],
+        ],
+        'garanties_par_formule' => [
+            'ACCESS'        => ['Soins courants'=>'100%' ,'Hospitalisation'=>'100%', 'Dentaire'=>'100%', 'Optique'=>'100%', 'Auditif'=>'100%', 'Assistance'=>'OUI', 'Cures thermales'=>'100%', 'Médecines douces'=>'-' ],
+            'MEDIUM'        => ['Soins courants'=>'125%' ,'Hospitalisation'=>'125%', 'Dentaire'=>'125%', 'Optique'=>'125%', 'Auditif'=>'100%', 'Assistance'=>'OUI', 'Cures thermales'=>'100%', 'Médecines douces'=>'Jusqu\'à 60 € par an' ],
+            'MEDIANE'       => ['Soins courants'=>'125%' ,'Hospitalisation'=>'150%', 'Dentaire'=>'150%', 'Optique'=>'150%', 'Auditif'=>'100% + 50 €', 'Assistance'=>'OUI', 'Cures thermales'=>'100% + 125 €', 'Médecines douces'=>'-' ],
+            'MEDIANE_PLUS'  => ['Soins courants'=>'125%' ,'Hospitalisation'=>'150%', 'Dentaire'=>'150%', 'Optique'=>'150%', 'Auditif'=>'100% + 50 €', 'Assistance'=>'OUI', 'Cures thermales'=>'100% + 125 €', 'Médecines douces'=>'-' ],
+            'INTEGRALE'     => ['Soins courants'=>'160%' ,'Hospitalisation'=>'200%', 'Dentaire'=>'200%', 'Optique'=>'175%', 'Auditif'=>'100% + 75 €', 'Assistance'=>'OUI', 'Cures thermales'=>'100% + 150 €', 'Médecines douces'=>'Jusqu\'à 90 € par an' ],
+            'INTEGRALE_PLUS'=> ['Soins courants'=>'150%' ,'Hospitalisation'=>'200%', 'Dentaire'=>'200%', 'Optique'=>'175%', 'Auditif'=>'100% + 75 €', 'Assistance'=>'OUI', 'Cures thermales'=>'100% + 150 €', 'Médecines douces'=>'Jusqu\'à 90 € par an' ],
+
+            'ES_100'    => ['Soins courants'=>'100%' ,'Hospitalisation'=>'100%', 'Dentaire'=>'100%', 'Optique'=>'100%', 'Auditif'=>'100%', 'Assistance'=>'OUI', 'Cures thermales'=>'100%', 'Médecines douces'=>'Option Renfort +, jusqu\'à 175€' ],
+            'ES_100_B'  => ['Soins courants'=>'100%' ,'Hospitalisation'=>'100%', 'Dentaire'=>'100%', 'Optique'=>'200%', 'Auditif'=>'100%', 'Assistance'=>'OUI', 'Cures thermales'=>'100%', 'Médecines douces'=>'Option Renfort +, jusqu\'à 175€' ],
+            'ES_125'    => ['Soins courants'=>'125%' ,'Hospitalisation'=>'125%', 'Dentaire'=>'125%', 'Optique'=>'200%', 'Auditif'=>'100% + 200€', 'Assistance'=>'OUI', 'Cures thermales'=>'125%', 'Médecines douces'=>'Option Renfort +, jusqu\'à 175€' ],
+            'ES_150'    => ['Soins courants'=>'150%' ,'Hospitalisation'=>'150%', 'Dentaire'=>'150%', 'Optique'=>'300%', 'Auditif'=>'100% + 400€', 'Assistance'=>'OUI', 'Cures thermales'=>'150%', 'Médecines douces'=>'Option Renfort +, jusqu\'à 175€' ],
+            'ES_175'    => ['Soins courants'=>'175%' ,'Hospitalisation'=>'175%', 'Dentaire'=>'175%', 'Optique'=>'325%', 'Auditif'=>'100% + 600€', 'Assistance'=>'OUI', 'Cures thermales'=>'175%', 'Médecines douces'=>'Option Renfort +, jusqu\'à 175€' ],
+            'ES_200'    => ['Soins courants'=>'200%' ,'Hospitalisation'=>'200%', 'Dentaire'=>'200%', 'Optique'=>'375%', 'Auditif'=>'100% + 800€', 'Assistance'=>'OUI', 'Cures thermales'=>'200%', 'Médecines douces'=>'Option Renfort +, jusqu\'à 175€' ],
+            'ES_250'    => ['Soins courants'=>'250%' ,'Hospitalisation'=>'250%', 'Dentaire'=>'250%', 'Optique'=>'425%', 'Auditif'=>'100% + 1 000€', 'Assistance'=>'OUI', 'Cures thermales'=>'250%', 'Médecines douces'=>'Option Renfort +, jusqu\'à 175€' ],
+            'ES_300'    => ['Soins courants'=>'300%' ,'Hospitalisation'=>'300%', 'Dentaire'=>'300%', 'Optique'=>'510%', 'Auditif'=>'100% + 1 300€', 'Assistance'=>'OUI', 'Cures thermales'=>'300%', 'Médecines douces'=>'Option Renfort +, jusqu\'à 175€' ],
+
+            'BUDGET'      => ['Soins courants'=>'100%' ,'Hospitalisation'=>'100%', 'Dentaire'=>'100%', 'Optique'=>'100%', 'Auditif'=>'100%', 'Assistance'=>'OUI', 'Cures thermales'=>'100%', 'Médecines douces'=>'-' ],
+            'ESSENTIEL'   => ['Soins courants'=>'125%' ,'Hospitalisation'=>'125%', 'Dentaire'=>'100%', 'Optique'=>'100%', 'Auditif'=>'100%', 'Assistance'=>'OUI', 'Cures thermales'=>'100% + 100€', 'Médecines douces'=>'-' ],
+            'SECURITE'    => ['Soins courants'=>'150%' ,'Hospitalisation'=>'200%', 'Dentaire'=>'150%', 'Optique'=>'330%', 'Auditif'=>'125%', 'Assistance'=>'OUI', 'Cures thermales'=>'100% + 100€', 'Médecines douces'=>'-' ],
+            'EQUILIBRE'   => ['Soins courants'=>'175%' ,'Hospitalisation'=>'250%', 'Dentaire'=>'200%', 'Optique'=>'350%', 'Auditif'=>'150%', 'Assistance'=>'OUI', 'Cures thermales'=>'100% + 200€', 'Médecines douces'=>'Jusqu\'à 60 € par an' ],
+            'CONFORT'     => ['Soins courants'=>'225%' ,'Hospitalisation'=>'300%', 'Dentaire'=>'225%', 'Optique'=>'430%', 'Auditif'=>'175%', 'Assistance'=>'OUI', 'Cures thermales'=>'100% + 300€', 'Médecines douces'=>'Jusqu\'à 90 € par an' ],
+            'BIEN_ETRE'   => ['Soins courants'=>'250%' ,'Hospitalisation'=>'400%', 'Dentaire'=>'275%', 'Optique'=>'480%', 'Auditif'=>'200%', 'Assistance'=>'OUI', 'Cures thermales'=>'100% + 350€', 'Médecines douces'=>'Jusqu\'à 120 € par an' ],
+
+            'BASIQUE'     => ['Soins courants'=>'100%' ,'Hospitalisation'=>'100%', 'Dentaire'=>'100%', 'Optique'=>'100%', 'Auditif'=>'100%', 'Assistance'=>'OUI', 'Cures thermales'=>'100%', 'Médecines douces'=>'-' ],
+            'BUDGET_PLUS' => ['Soins courants'=>'125%' ,'Hospitalisation'=>'125%', 'Dentaire'=>'100%', 'Optique'=>'100%', 'Auditif'=>'100% + 50€', 'Assistance'=>'OUI', 'Cures thermales'=>'100 % + 100 €', 'Médecines douces'=>'-' ],
+            'RENFORT'     => ['Soins courants'=>'125%' ,'Hospitalisation'=>'125%', 'Dentaire'=>'120%', 'Optique'=>'200%', 'Auditif'=>'100% + 50€', 'Assistance'=>'OUI', 'Cures thermales'=>'100 % + 100 €', 'Médecines douces'=>'-' ],
+            'ENERGIE'     => ['Soins courants'=>'160%' ,'Hospitalisation'=>'160%', 'Dentaire'=>'120%', 'Optique'=>'200%', 'Auditif'=>'100% + 50€', 'Assistance'=>'OUI', 'Cures thermales'=>'100 % + 100 €', 'Médecines douces'=>'-' ],
+            'QUIETUDE'    => ['Soins courants'=>'-' ,'Hospitalisation'=>'-', 'Dentaire'=>'-', 'Optique'=>'-', 'Auditif'=>'-', 'Assistance'=>'OUI', 'Cures thermales'=>'-', 'Médecines douces'=>'-' ],
+            'CONFIANCE'   => ['Soins courants'=>'-' ,'Hospitalisation'=>'-', 'Dentaire'=>'-', 'Optique'=>'-', 'Auditif'=>'-', 'Assistance'=>'OUI', 'Cures thermales'=>'-', 'Médecines douces'=>'-' ],
+            'PREMIUM'     => ['Soins courants'=>'-' ,'Hospitalisation'=>'-', 'Dentaire'=>'-', 'Optique'=>'-', 'Auditif'=>'-', 'Assistance'=>'OUI', 'Cures thermales'=>'-', 'Médecines douces'=>'-' ],
+
+            'OPTION_BUDGET_100_B' => ['Soins courants'=>'100%' ,'Hospitalisation'=>'125%', 'Dentaire'=>'100%', 'Optique'=>'100%', 'Auditif'=>'100%', 'Assistance'=>'-', 'Cures thermales'=>'-', 'Médecines douces'=>'-' ],
+            'OPTION_BUDGET_150_B' => ['Soins courants'=>'100%' ,'Hospitalisation'=>'150%', 'Dentaire'=>'150%', 'Optique'=>'100%', 'Auditif'=>'100%', 'Assistance'=>'-', 'Cures thermales'=>'-', 'Médecines douces'=>'-' ],
+            'OPTION_BUDGET_175_B' => ['Soins courants'=>'120%' ,'Hospitalisation'=>'175%', 'Dentaire'=>'175%', 'Optique'=>'125%', 'Auditif'=>'100%', 'Assistance'=>'-', 'Cures thermales'=>'-', 'Médecines douces'=>'-' ],
+            'OPTION_BUDGET_250_B' => ['Soins courants'=>'130%' ,'Hospitalisation'=>'250%', 'Dentaire'=>'200%', 'Optique'=>'150%', 'Auditif'=>'100%', 'Assistance'=>'-', 'Cures thermales'=>'-', 'Médecines douces'=>'-' ],
+            'OPTION_BUDGET_300_B' => ['Soins courants'=>'170%' ,'Hospitalisation'=>'300%', 'Dentaire'=>'250%', 'Optique'=>'200%', 'Auditif'=>'100%', 'Assistance'=>'-', 'Cures thermales'=>'-', 'Médecines douces'=>'-' ],
+
+            'CAP_1' => ['Soins courants'=>'100%' ,'Hospitalisation'=>'100%', 'Dentaire'=>'100%', 'Optique'=>'100%', 'Auditif'=>'100% + 50€', 'Assistance'=>'OUI', 'Cures thermales'=>'100%', 'Médecines douces'=>'-' ],
+            'CAP_2' => ['Soins courants'=>'125%' ,'Hospitalisation'=>'125%', 'Dentaire'=>'125%', 'Optique'=>'125%', 'Auditif'=>'100% + 75€', 'Assistance'=>'OUI', 'Cures thermales'=>'125%', 'Médecines douces'=>'Jusqu\'à 60 € par an' ],
+            'CAP_3' => ['Soins courants'=>'150%' ,'Hospitalisation'=>'150%', 'Dentaire'=>'150%', 'Optique'=>'150%', 'Auditif'=>'100% + 100€', 'Assistance'=>'OUI', 'Cures thermales'=>'150%', 'Médecines douces'=>'Jusqu\'à 90 € par an' ],
+            'CAP_4' => ['Soins courants'=>'200%' ,'Hospitalisation'=>'200%', 'Dentaire'=>'200%', 'Optique'=>'200%', 'Auditif'=>'100% + 150€', 'Assistance'=>'OUI', 'Cures thermales'=>'200%', 'Médecines douces'=>'Jusqu\'à 120 € par an' ],
+
+            'SERENISSIME_FORMULE_150' => ['Soins courants'=>'100%' ,'Hospitalisation'=>'150%', 'Dentaire'=>'100%', 'Optique'=>'200%', 'Auditif'=>'100% + 50€', 'Assistance'=>'OUI', 'Cures thermales'=>'100%', 'Médecines douces'=>'-' ],
+            'SERENISSIME_FORMULE_200' => ['Soins courants'=>'125%' ,'Hospitalisation'=>'200%', 'Dentaire'=>'125%', 'Optique'=>'200%', 'Auditif'=>'100% + 75€', 'Assistance'=>'OUI', 'Cures thermales'=>'125%', 'Médecines douces'=>'Jusqu\'à 60 € par an' ],
+            'SERENISSIME_FORMULE_250' => ['Soins courants'=>'150%' ,'Hospitalisation'=>'250%', 'Dentaire'=>'150%', 'Optique'=>'200%', 'Auditif'=>'100% + 100€', 'Assistance'=>'OUI', 'Cures thermales'=>'150%', 'Médecines douces'=>'Jusqu\'à 90 € par an' ],
+            'SERENISSIME_FORMULE_300' => ['Soins courants'=>'200%' ,'Hospitalisation'=>'300%', 'Dentaire'=>'200%', 'Optique'=>'250%', 'Auditif'=>'100% + 150€', 'Assistance'=>'OUI', 'Cures thermales'=>'200%', 'Médecines douces'=>'Jusqu\'à 120 € par an' ],
+
+            'FORMULE_1' => ['Soins courants'=>'100%' ,'Hospitalisation'=>'100%', 'Dentaire'=>'100%', 'Optique'=>'100%', 'Auditif'=>'100%', 'Assistance'=>'OUI', 'Cures thermales'=>'100%', 'Médecines douces'=>'-' ],
+            'FORMULE_2' => ['Soins courants'=>'125%' ,'Hospitalisation'=>'150%', 'Dentaire'=>'150%', 'Optique'=>'150%', 'Auditif'=>'100% + 50€', 'Assistance'=>'OUI', 'Cures thermales'=>'100% + 50€', 'Médecines douces'=>'-' ],
+            'FORMULE_3' => ['Soins courants'=>'150%' ,'Hospitalisation'=>'200%', 'Dentaire'=>'200%', 'Optique'=>'175%', 'Auditif'=>'100% + 75€', 'Assistance'=>'OUI', 'Cures thermales'=>'100% + 75€', 'Médecines douces'=>'Jusqu\'à 90 € par an' ],
+            'FORMULE_4' => ['Soins courants'=>'200%' ,'Hospitalisation'=>'250%', 'Dentaire'=>'250%', 'Optique'=>'200%', 'Auditif'=>'100% + 100€', 'Assistance'=>'OUI', 'Cures thermales'=>'100% + 100€', 'Médecines douces'=>'Jusqu\'à 150 € par an' ],
+            'FORMULE_5' => ['Soins courants'=>'250%' ,'Hospitalisation'=>'300%', 'Dentaire'=>'300%', 'Optique'=>'300%', 'Auditif'=>'100% + 150€', 'Assistance'=>'OUI', 'Cures thermales'=>'100% + 150€', 'Médecines douces'=>'Jusqu\'à 200 € par an' ],
+            
+            'MUTACTIF_FORMULE_100' => ['Soins courants'=>'' ,'Hospitalisation'=>'', 'Dentaire'=>'', 'Optique'=>'', 'Auditif'=>'', 'Assistance'=>'', 'Cures thermales'=>'', 'Médecines douces'=>''],
+            'MUTACTIF_FORMULE_150' => ['Soins courants'=>'' ,'Hospitalisation'=>'', 'Dentaire'=>'', 'Optique'=>'', 'Auditif'=>'', 'Assistance'=>'', 'Cures thermales'=>'', 'Médecines douces'=>''],
+            'MUTACTIF_FORMULE_200' => ['Soins courants'=>'' ,'Hospitalisation'=>'', 'Dentaire'=>'', 'Optique'=>'', 'Auditif'=>'', 'Assistance'=>'', 'Cures thermales'=>'', 'Médecines douces'=>''],
+            'MUTACTIF_FORMULE_250' => ['Soins courants'=>'' ,'Hospitalisation'=>'', 'Dentaire'=>'', 'Optique'=>'', 'Auditif'=>'', 'Assistance'=>'', 'Cures thermales'=>'', 'Médecines douces'=>''],
+            'MUTACTIF_FORMULE_300' => ['Soins courants'=>'' ,'Hospitalisation'=>'', 'Dentaire'=>'', 'Optique'=>'', 'Auditif'=>'', 'Assistance'=>'', 'Cures thermales'=>'', 'Médecines douces'=>''],
+
+        ],
+        'options_produit_serenissia' => [
+            "RENFORT_PLUS" => "<span class='fw-bold'>Option Renfort + </span>( Médecines douces, Capital perte d’autonomie, Dentaire non remboursé… )",
+            "PHARMA_PLUS" => "<span class='fw-bold'>Option Pharma + </span>(Médicaments à 65%, à 30%, à 15%  uniquement remboursés par l\'AMO )",
+        ],
+        'tooltipText_par_garantie' => [
+            'Soins courants'    => "Médecine générale, pharmacie, examens, radios, etc.",
+            'Hospitalisation'   => "Frais de séjour, frais de transport, chirurgie, etc.",
+            'Dentaire'          => "Dentiste, prothèses, soins, etc.",
+            'Optique'           => "Lentilles, lunettes, chirurgie réfractive, etc.",
+            'Auditif'           => "Aides auditives, prothèses orthopédiques, petit et gros appareillage, accessoires…",
+            'Assistance'        => "Informations médicales générales et aide à domicile",
+            'Cures thermales'   => "Cures thermales prises en charges par l’AMO",
+            'Médecines douces'  => "Ostéopathe, chiropracteur, acupuncteur …",
+
+        ],
+    ],
+];
