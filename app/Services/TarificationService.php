@@ -83,6 +83,9 @@ class TarificationService
 
         foreach ($filteredData as $item) {
             $produit = $this->getKeyByValue($formules, $item['formule']);
+            if (!$produit) {
+                continue; // Skip if produit is not found
+            }
             $ageAutorise = $ageRanges[$produit];
             $isAgeCompatible = $this->isAgeBetween($age, $ageAutorise['min'], $ageAutorise['max']);
             $isBudgetCompatible = in_array($item['formule'], $formuleBudget[$budget]);
