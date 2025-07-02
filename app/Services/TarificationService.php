@@ -40,20 +40,20 @@ class TarificationService
         }
 
         // Formater le nombre d'enfants
+        $dateNaissanceEnfants = [];
         if (isset($data['nbrEnfant'])) {
             $formattedData['nbrEnfant'] = $data['nbrEnfant'];
-        }
-
-        // Formater les dates de naissance des enfants
-        $dateNaissanceEnfants = [];
-        for ($i = 1; $i <= 8; $i++) {
-            if (isset($data["dateNaissanceEnfant{$i}"])) {
-                $dateNaissanceEnfants[] = $this->formatDate($data["dateNaissanceEnfant{$i}"]);
+            // Formater les dates de naissance des enfants
+            if($formattedData['nbrEnfant'] > 0){
+                for ($i = 1; $i <= $formattedData['nbrEnfant']; $i++) {
+                    if (isset($data["dateNaissanceEnfant{$i}"])) {
+                        $dateNaissanceEnfants[] = $this->formatDate($data["dateNaissanceEnfant{$i}"]);
+                    }
+                }
             }
         }
-        if (!empty($dateNaissanceEnfants)) {
-            $formattedData['dateNaissanceEnfants'] = $dateNaissanceEnfants;
-        }
+
+        $formattedData['dateNaissanceEnfants'] = $dateNaissanceEnfants;
 
         // Formater l'assurance du conjoint
         if (isset($data['assure']) && (strpos($data['assure'], 'couple') !== false)) {
