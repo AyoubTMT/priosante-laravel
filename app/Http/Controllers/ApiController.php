@@ -7,6 +7,7 @@ use Carbon\Carbon;
 use Illuminate\Http\Request;
 use App\Services\ApiAuthService;
 use App\Services\TarificationService;
+use App\Services\SaveService;
 use Illuminate\Support\Facades\Http;
 use GuzzleHttp\Exception\RequestException;
 use Illuminate\Support\Facades\Config;
@@ -15,11 +16,13 @@ class ApiController extends Controller
 {
     protected $apiAuthService;
     protected $tarificationService;
+    protected $saveService;
 
-    public function __construct(ApiAuthService $apiAuthService, TarificationService $tarificationService)
+    public function __construct(ApiAuthService $apiAuthService, TarificationService $tarificationService, SaveService $saveService)
     {
         $this->apiAuthService = $apiAuthService;
         $this->tarificationService = $tarificationService;
+        $this->saveService = $saveService;
     }
 
     public function test(Request $request)
@@ -91,10 +94,6 @@ class ApiController extends Controller
     public function saveDevis(Request $request)
     {
         $token = $this->apiAuthService->getToken();
-        $formattedData = $this->tarificationService->formatRequestData($request->all());
-
-        $response = Http::withToken($token)->post('https://ws.eca-partenaires.com/api/saveContrat', $formattedData);
-
-        return $response->json();
+        return $this->saveService->save($token,$request->all());
     }
 }
