@@ -73,7 +73,6 @@
             <p><strong>Revenu Mensuel :</strong> {{ $revenuMensuel }}</p>
             <p><strong>Voie :</strong> {{ $voie }}</p>
             <p><strong>Ville :</strong> {{ $ville }}</p>
-            <p><strong>Civilité :</strong> {{ $cv }}</p>
             <p><strong>Souscripteur est Assuré :</strong> {{ $souscripteurIsAssure }}</p>
         </div>
 
