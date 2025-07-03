@@ -22,35 +22,17 @@ class ContactController extends Controller
         ];
 
         $fromAddress = 'contact@prioritesantemutuelle.fr';
-        Mail::to('mohamed.tajmout@gmail.com')->send(new ContactMail($details, $fromAddress));
-
-        return response()->json(['message' => 'Email sent successfully!']);
-    }
-    public function sendEmail(Request $request)
-    {
-        $validated = $request->validate([
-            'name' => 'nullable',
-            'telephone' => 'nullable',
-            'email' => 'nullable',
-            'lien' => 'nullable',
-            'reference' => 'nullable',
-        ]);
-
-        $details = [
-            'name' => $validated['name'] ?? '',
-            'telephone' => $validated['telephone'] ?? '',
-            'email' => $validated['email'] ?? '',
-            'lien' => $validated['lien'] ?? '',
-            'reference' => $validated['reference'] ?? '',
-        ];
-
-        $fromAddress = 'signature@assurmabarak.com';
-        Mail::to('signature@assurmabarak.com')->send(new ContactMail($details, $fromAddress));
-        Mail::to('mohamed.tajmout@gmail.com')->send(new ContactMail($details, $fromAddress));
+        Mail::to('contact@prioritesantemutuelle.fr')->send(new ContactMail($details, $fromAddress));
 
         return response()->json(['message' => 'Email sent successfully!']);
     }
 
+    /**
+     * Send a tarification notification email.
+     *
+     * @param Request $request
+     * @return \Illuminate\Http\JsonResponse
+     */
     public function sendTarificationNotification(Request $request)
     {
         Log::info('Tarification notification request data:', $request->all());
@@ -70,10 +52,27 @@ class ContactController extends Controller
         ];
         Log::info('Tarification notification data:', $data);
         Mail::send('mails.tarification_notification', $data, function($message) use ($data) {
-            $message->to('mohamed.tajmout@gmail.com')
+            $message->to('contact@prioritesantemutuelle.fr')
                     ->subject('Notification de Tarification par le Client : ' . $data['name']);
         });
         Log::info('Tarification notification email sent successfully.');
+        return response()->json(['message' => 'E-mail de notification envoyé avec succès!']);
+    }
+    /**
+     * Send a subscription notification email.
+     *
+     * @param Request $request
+     * @return \Illuminate\Http\JsonResponse
+     */
+    public function sendSouscriptionNotification(Request $request)
+    {
+        $data = $request->all();
+
+        Mail::send('mails.souscription_notification', $data, function($message) use ($data) {
+            $message->to('contact@prioritesantemutuelle.fr')
+                    ->subject('Notification de Souscription par le Client : ' . $data['cv'] .' '. $data['name']);
+        });
+
         return response()->json(['message' => 'E-mail de notification envoyé avec succès!']);
     }
 }
