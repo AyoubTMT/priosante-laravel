@@ -10,6 +10,22 @@ use Illuminate\Support\Facades\Log;
 
 class ContactController extends Controller
 {
+    public function sendEmailTest(Request $request)
+    {
+
+        $details = [
+            'name' => 'name',
+            'telephone' => 'telephone',
+            'email' => 'email',
+            'lien' => 'lien',
+            'reference' => 'reference',
+        ];
+
+        $fromAddress = 'contact@prioritesantemutuelle.fr';
+        Mail::to('mohamed.tajmout@gmail.com')->send(new ContactMail($details, $fromAddress));
+
+        return response()->json(['message' => 'Email sent successfully!']);
+    }
     public function sendEmail(Request $request)
     {
         $validated = $request->validate([
