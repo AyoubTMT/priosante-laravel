@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ApiController;
+use App\Http\Controllers\ContactController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,3 +24,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::post('/tarificateur', [ApiController::class, 'getTariffs']);
 Route::post('/saveDevis', [ApiController::class, 'saveDevis']);
 Route::get('/test', [ApiController::class, 'test']);
+Route::post('/send-tarification-email', [ContactController::class, 'sendTarificationNotification']);
