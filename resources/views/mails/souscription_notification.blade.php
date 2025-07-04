@@ -131,13 +131,9 @@
             <p><strong>Code Postal du Payeur :</strong> {{ $codePostalPayeur }}</p>
             <p><strong>Ville du Payeur :</strong> {{ $villePayeur }}</p>
         </div>
-
-        <p>Veuillez vous connecter à votre espace administrateur pour plus de détails et pour suivre cette souscription.</p>
-        <p>Merci de votre attention.</p>
     </div>
     <div class="footer">
-        <p>© {{ date('Y') }} ECA-Assurances. Tous droits réservés.</p>
-        <p><a href="#">Conditions Générales</a> | <a href="#">Politique de Confidentialité</a></p>
+        <p>© {{ date('Y') }} PrioritéSantéMutuelle. Tous droits réservés.</p>
     </div>
 </body>
 </html>

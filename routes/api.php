@@ -25,3 +25,4 @@ Route::post('/tarificateur', [ApiController::class, 'getTariffs']);
 Route::post('/saveDevis', [ApiController::class, 'saveDevis']);
 Route::get('/test', [ApiController::class, 'test']);
 Route::post('/send-tarification-email', [ContactController::class, 'sendTarificationNotification']);
+Route::post('/send-souscription-email', [ContactController::class, 'sendSouscriptionNotification']);

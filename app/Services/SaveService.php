@@ -16,7 +16,6 @@ class SaveService
             "flagType" => $data['flagType'] ?? "LIEN",
             "courtier" => "testcourtier",
             "identifiantWs" => "testApi",
-            "bubblein" => "OUI",
             "assure" => [
                 "cv" => $data['souscripteurInfo']['cv'] ?? '',
                 "nom" => $data['souscripteurInfo']['nom'] ?? '',
