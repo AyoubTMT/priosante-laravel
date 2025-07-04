@@ -4,7 +4,7 @@ return [
         'formules_par_produit' =>[
             'SERENISSIA' => ['ES_100','ES_100_B','ES_125','ES_150','ES_175','ES_200','ES_250','ES_300'],
             'CAPITAL_SENIOR'          => ['BUDGET','ESSENTIEL','SECURITE','EQUILIBRE','CONFORT','BIEN_ETRE'],
-            'CAPITAL_VITALITE_SENIOR' => ['BASIQUE','BUDGET_PLUS','RENFORT','ENERGIE'],
+            'CAPITAL_SENIOR_VITALITE' => ['BASIQUE','BUDGET_PLUS','RENFORT','ENERGIE'],
             'OPTION_BUDGET' => ['OPTION_BUDGET_100_B','OPTION_BUDGET_150_B','OPTION_BUDGET_175_B','OPTION_BUDGET_250_B','OPTION_BUDGET_300_B'],
             'CAP_SANTE_SENIOR_REMA' => ['CAP_1','CAP_2','CAP_3','CAP_4'],
             'SERENISSIME_INSUREM' => ['SERENISSIME_FORMULE_150','SERENISSIME_FORMULE_200','SERENISSIME_FORMULE_250','SERENISSIME_FORMULE_300'],
@@ -19,7 +19,7 @@ return [
             'ACTISAN'                           => ['min'=>'18','max'=>'55'],
             'SERENISSIA'                        => ['min'=>'55','max'=>'85'],
             'CAPITAL_SENIOR'           => ['min'=>'55','max'=>'95'],
-            'CAPITAL_VITALITE_SENIOR'  => ['min'=>'55','max'=>'100'],
+            'CAPITAL_SENIOR_VITALITE'  => ['min'=>'55','max'=>'100'],
             'OPTION_BUDGET'            => ['min'=>'18','max'=>'85'],
             'CAP_SANTE_SENIOR_REMA'    => ['min'=>'60','max'=>'95'],
             'SERENISSIME_INSUREM'      => ['min'=>'55','max'=>'90'],
